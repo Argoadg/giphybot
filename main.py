@@ -30,8 +30,7 @@ async def send_giphy():
     if channel:
         day_of_year = datetime.utcnow().timetuple().tm_yday
         gif = giphy_list[(day_of_year - 1) % len(giphy_list)]
-        await channel.send(f"Guten Morgen! 🌞")
-{gif}")
+        await channel.send(f"Guten Morgen! 🌞\n{gif}")
     else:
         print("❌ Channel nicht gefunden.")
 
